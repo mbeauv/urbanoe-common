@@ -1,0 +1,7 @@
+dist/
+node_modules/
+docs/
+coverage/
+.expo/
+npm-debug.*
+*.log
