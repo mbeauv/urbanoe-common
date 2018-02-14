@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Defines grab bag of methods and classes for urbanoe.",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mbeauv/urbanoe-common.git"
+  },
   "scripts": {
     "prebuild": "rimraf dist && mkdir dist",
     "build": "babel src/ -d dist/ --copy-files --ignore __tests__",
@@ -34,6 +38,6 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "moment": "^2.20.1",
-    "urbanoe-model": "^1.0.0"
+    "urbanoe-model": "^1.0.1"
   }
 }
