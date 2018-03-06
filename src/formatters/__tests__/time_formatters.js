@@ -14,7 +14,7 @@ describe('time_formatters', () => {
 
   describe('convertEpochToDate', () => {
     it('returns date for epoch', () => {
-      expect(convertEpochToDate(1517173252000)).toEqual(new Date('January 28, 2018 16:00:52'));
+      expect(convertEpochToDate(1517173252000)).toEqual(new Date('January 28, 2018 21:00:52Z'));
     });
   });
 });
