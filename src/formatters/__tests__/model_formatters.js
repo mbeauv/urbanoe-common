@@ -1,3 +1,5 @@
+// @flow
+
 import {
   formatStateCountryNames,
   formatStreetName,
@@ -7,6 +9,10 @@ import {
   findIssueType,
 } from '../model_formatters';
 
+const NULL_STR: string = (null: any);
+
+const NULL_NUM: number = (null: any);
+
 describe('model_formatters', () => {
   describe('formatStateCountryNames', () => {
     it('returns country and state names', () => {
@@ -14,7 +20,7 @@ describe('model_formatters', () => {
     });
 
     it('returns country name when state is null', () => {
-      expect(formatStateCountryNames(null, 'country')).toEqual('country');
+      expect(formatStateCountryNames((NULL_STR), 'country')).toEqual('country');
     });
   });
 
@@ -24,21 +30,21 @@ describe('model_formatters', () => {
     });
 
     it('returns unknown if not provided', () => {
-      expect(formatStreetName(null)).toEqual('Unknown');
+      expect(formatStreetName(NULL_STR)).toEqual('Unknown');
     });
   });
 
   describe('formatAccuracy', () => {
     it('returns rounded accuracy (lower bound)', () => {
-      expect(formatAccuracy({ accuracy: 22.32 })).toEqual('22');
+      expect(formatAccuracy(22.32)).toEqual('22');
     });
 
     it('returns rounded accuracy', () => {
-      expect(formatAccuracy({ accuracy: 22.62 })).toEqual('23');
+      expect(formatAccuracy(22.62)).toEqual('23');
     });
 
     it('returns unknown accuracy', () => {
-      expect(formatAccuracy({ accuracy: null })).toEqual('Unknown');
+      expect(formatAccuracy(NULL_NUM)).toEqual('Unknown');
     });
   });
 

@@ -1,6 +1,6 @@
 {
   "name": "urbanoe-common",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Defines grab bag of methods and classes for urbanoe.",
   "main": "dist/index.js",
   "repository": {
@@ -38,7 +38,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.4",
-    "moment": "^2.20.1",
-    "urbanoe-model": "^1.0.1"
+    "moment": "^2.20.1"
   }
 }

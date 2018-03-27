@@ -16,3 +16,11 @@ export function convertEpochToDate(epoch: number) : Date {
 export function formatDateYYYYMMDD(date: Date) : string {
   return moment(date).format('YYYY/MM/DD');
 }
+
+export function formatRailsTimeToYYYYMMDD(dateString: string) : string {
+  return moment(dateString).format('YYYY/MM/DD');
+}
+
+export function formatRailsTimeToYYYYMMDDHHmm(dateString: string) : string {
+  return moment(dateString).format('YYYY/MM/DD HH:mm:ss');
+}

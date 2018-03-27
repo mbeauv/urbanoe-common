@@ -1,7 +1,6 @@
 // @flow
 
 import _ from 'lodash';
-import type { Coordinates, IssueType } from 'urbanoe-model';
 
 const UNKNOWN = 'Unknown';
 
@@ -26,9 +25,9 @@ export function formatStreetName(streetName: string) : string {
  * Returns a rounded value for the accuracy. If the accuracy is not provided
  * the `Unknown` is returned.
  */
-export function formatAccuracy(coordinates : Coordinates) : string {
-  if (coordinates && coordinates.accuracy) {
-    return _.round(coordinates.accuracy).toString();
+export function formatAccuracy(accuracy : number) : string {
+  if (accuracy) {
+    return _.round(accuracy).toString();
   }
   return UNKNOWN;
 }
@@ -54,7 +53,7 @@ export function formatPropertyValue(propertyValue: string) : string {
  * the capitalize value is true, the first letter of the type will be
  * capitalized.
  */
-export function findIssueType(issueType : IssueType, capitalize?: bool) {
+export function findIssueType(issueType : string, capitalize?: bool) {
   const value = issueType.replace(/_/g, ' ');
   return capitalize ? _.startCase(value) : value;
 }
