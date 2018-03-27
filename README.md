@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/e5acb41fa9167b59d8b5/maintainability)](https://codeclimate.com/github/mbeauv/urbanoe-common/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/e5acb41fa9167b59d8b5/test_coverage)](https://codeclimate.com/github/mbeauv/urbanoe-common/test_coverage)
+
 # urbanoe-common
 
 Module defining base classes and functions for an urbanoe based client.  What you'll mainly find here a formatting methods that can be
