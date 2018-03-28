@@ -1,5 +1,5 @@
 // @flow
-
+import moment from 'moment-timezone';
 import {
   formatDateYYYYMMDD,
   formatRailsTimeToYYYYMMDD,
@@ -10,6 +10,10 @@ import {
 const TEST_DATE = new Date(2016, 2, 22);
 
 describe('time_formatters', () => {
+  beforeAll(() => {
+    moment.tz.setDefault('America/New_York');
+  });
+
   describe('formatRailsTimeToYYYYMMDD', () => {
     it('converts 2018-03-21T12:05:59.954Z to 2018/03/21', () => {
       expect(formatRailsTimeToYYYYMMDD('2018-03-21T12:05:59.954Z')).toEqual('2018/03/21');
