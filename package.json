@@ -1,6 +1,6 @@
 {
   "name": "urbanoe-common",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Defines grab bag of methods and classes for urbanoe.",
   "main": "dist/index.js",
   "repository": {
