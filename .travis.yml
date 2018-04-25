@@ -17,6 +17,9 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 
+before_install:
+  - npm install -g flow-bin@0.70.0
+
 script:
   - npm run lint
   - npm run testc
